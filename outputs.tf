@@ -2,5 +2,5 @@
 # Licensed under the MIT License.
 
 output "management_groups" {
-    value = local.management_group_output
+  value = local.management_group_output
 }

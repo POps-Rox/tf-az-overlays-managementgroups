@@ -15,11 +15,11 @@ AUTHOR/S: jrspinella
 data "azurerm_subscription" "current_client" {}
 
 module "mod_management_group" {
-  source            = "../.."
-  root_id           = "anoa"
-  root_parent_id    = data.azurerm_subscription.current_client.tenant_id
-  root_name         = "anoa"
-  management_groups =  {
+  source         = "../.."
+  root_id        = "anoa"
+  root_parent_id = data.azurerm_subscription.current_client.tenant_id
+  root_name      = "anoa"
+  management_groups = {
     "platforms" = {
       display_name               = "platforms"
       management_group_name      = "platforms"
