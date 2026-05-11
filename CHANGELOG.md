@@ -1,6 +1,21 @@
 # Changelog
 
-## [Unreleased](https://github.com/Azure/terraform-verified-module/tree/HEAD)
+## [Unreleased](https://github.com/POps-Rox/terraform-az-overlays-managementgroups/tree/HEAD)
+
+## [v2.0.0] - 2026-05-11
+
+### Changed
+
+- **BREAKING**: Bumped `azurerm` provider to `~> 4.20` (was `~> 3.116`).
+- **BREAKING**: Bumped Terraform required_version to `>= 1.10` (was `>= 1.9`).
+- Added `azapi ~> 2.0` and `popsrox POps-Rox/azutils ~> 1.0` to required_providers for fleet alignment.
+- Added `time` provider declaration (was previously implicit).
+- Examples: refreshed `versions.tf` to match the fleet baseline.
+
+### Migration notes
+
+- No resource argument renames were needed in this module (no storage/keyvault/AKS surface).
+- Consumers must set `ARM_SUBSCRIPTION_ID` (or `provider "azurerm" { subscription_id = ... }`) — azurerm 4.x makes this mandatory.
 
 **Merged pull requests:**
 
